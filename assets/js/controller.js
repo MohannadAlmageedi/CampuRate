@@ -1,10 +1,10 @@
 document.getElementById("surveyForm").addEventListener("submit", async function (event) {
-    event.preventDefault(); // منع الإرسال الافتراضي
+    event.preventDefault();
 
     const form = event.target;
     const formData = new FormData(form);
 
-    // رابط تطبيق Google Apps Script
+  
     const scriptURL = "https://script.google.com/macros/s/AKfycbzfFWvrPMG6V-b_ttoRi0DNmHv24hhwQcKE6LhUJI5YpM07x8ajlqs5SVKf0mCcbKJ5/exec";
 
     try {
