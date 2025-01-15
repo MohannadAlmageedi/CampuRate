@@ -6,7 +6,6 @@
     direction: ltr;
 }
 
-
 body {
     background-color: #f9f9f9;
     color: #333;
@@ -16,8 +15,6 @@ body {
 .container {
     width: 50%;
     margin: 0 auto;
-
-
 }
 
 .header {
@@ -31,7 +28,6 @@ body {
     border-radius: 25px;
 }
 
-
 h2 {
     color: #004d99;
     text-align: center;
@@ -43,7 +39,6 @@ p {
     margin-bottom: 30px;
 }
 
-/* Form styling */
 form {
     background-color: #fff;
     padding: 20px;
@@ -64,7 +59,6 @@ legend {
     color: #004d99;
 }
 
-/* Input Fields */
 input[type="text"],
 input[type="number"],
 input[type="email"],
@@ -88,21 +82,18 @@ textarea {
     min-height: 100px;
 }
 
-/* Placeholder styling */
 input::placeholder,
 textarea::placeholder {
     color: #888;
     font-style: italic;
 }
 
-/* Labels */
 label {
     font-weight: bold;
     display: block;
     margin-bottom: 5px;
 }
 
-/* Buttons */
 button[type="submit"] {
     background-color: #004d99;
     color: gold;
@@ -118,7 +109,6 @@ button[type="submit"] {
 button[type="submit"]:hover {
     background-color: #003366;
 }
-
 
 @media (max-width: 768px) {
     .container {
@@ -139,7 +129,6 @@ button[type="submit"]:hover {
 }
 
 @media (max-width: 480px) {
-
     label,
     input,
     select,
@@ -157,43 +146,26 @@ button[type="submit"]:hover {
     }
 }
 
-/* Footer */
 footer {
-
     background-color: #1a2a6c;
     color: gold;
-
     text-align: center;
-    border 2px solid gold;
+    border: 2px solid gold;
     padding: 5px;
     border-radius: 25px;
-
-
 }
 
 footer p {
     font-size: 1rem;
-
 }
 
-
-
-
-
-
-/* Style checkboxes with text next to them */
 div input[type="checkbox"] {
     margin-right: 10px;
-    /* Add space between checkbox and text */
     vertical-align: middle;
-    /* Align checkbox vertically with text */
 }
 
 div label {
     display: inline-block;
-    /* Ensure the label is inline with the checkbox */
     vertical-align: middle;
-    /* Align text vertically with the checkbox */
     margin: 0;
-    /* Remove extra margins if present */
 }
