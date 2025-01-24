@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="University Student Experience Survey">
+    <title>University Student Experience Survey</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="../assets/css/fonts.css">
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <h1>University Student Experience Survey</h1>
+
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <form id="surveyForm">
+                <!-- Preliminary Section -->
+                <fieldset>
+                    <legend>Preliminary Section: Personal Information</legend>
+
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+                    <label for="gender">Gender:</label>
+                    <select id="gender" name="gender" required>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+
+                    <label for="age">Age:</label>
+                    <select id="age" name="age" required>
+                        <option value="Under 18">Under 18</option>
+                        <option value="18-22">18-22</option>
+                        <option value="23-26">23-26</option>
+                        <option value="Over 26">Over 26</option>
+                    </select>
+
+                    <label for="university">University:</label>
+                    <input list="universityOptions" id="university" name="university" required>
+                    <datalist id="universityOptions">
+                        <option value="Taiz University">
+                        <option value="University of Science and Technology - Taiz Branch">
+                        <option value="National University">
+                        <option value="Al-Saeed University">
+                        <option value="Al-Janad University for Science and Technology">
+                        <option value="Other">
+                    </datalist>
+
+
+                    <label for="specialization">Field of Study:</label>
+                    <input list="specializationOptions" id="specialization" name="specialization" required>
+                    <datalist id="specializationOptions">
+                        <option value="Engineering">
+                        <option value="Medicine">
+                        <option value="Business Administration">
+                        <option value="Computer Science">
+                        <option value="Humanities">
+                        <option value="Other">
+                    </datalist>
+                </fieldset>
+
+
+                <fieldset>
+                    <legend>Section 1: Attendance and Lecture Interaction</legend>
+
+                    <label for="attendanceImportance">How important is attending lectures for academic success?</label>
+                    <select id="attendanceImportance" name="attendanceImportance" required>
+                        <option value="Very Important">Very Important</option>
+                        <option value="Important">Important</option>
+                        <option value="Not Important">Not Important</option>
+                        <option value="Not Important at All">Not Important at All</option>
+                    </select>
+
+                    <label for="relianceOnLecturer">Do you mainly rely on the lecturer's explanations to understand the
+                        course?</label>
+                    <select id="relianceOnLecturer" name="relianceOnLecturer" required>
+                        <option value="Yes, completely">Yes, completely</option>
+                        <option value="Sometimes">Sometimes</option>
+                        <option value="No, I rely on other sources">No, I rely on other sources</option>
+                    </select>
+
+                    <label for="externalResources">If you use external resources, what are they?</label>
+                    <div>
+                        <input type="checkbox" id="youtube" name="externalResources"
+                            value="Online educational videos (e.g., YouTube, Coursera)">
+                        <label for="youtube">Online educational videos</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="books" name="externalResources"
+                            value="Additional books and references">
+                        <label for="books">Additional books and references</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="studyGroups" name="externalResources"
+                            value="Study groups with peers">
+                        <label for="studyGroups">Study groups with peers</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="privateLessons" name="externalResources" value="Private lessons">
+                        <label for="privateLessons">Private lessons</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="others" name="externalResources" value="Other">
+                        <label for="others">Other:</label>
+                        <input type="text" id="otherResources" name="otherResources" placeholder="Enter other resource">
+                    </div>
+
+                    <label for="lecturerExplanation">How would you describe most lecturers' teaching methods at your
+                        university?</label>
+                    <select id="lecturerExplanation" name="lecturerExplanation" required>
+                        <option value="Excellent and clear">Excellent and clear</option>
+                        <option value="Good but needs improvement">Good but needs improvement</option>
+                        <option value="Complicated and unclear">Complicated and unclear</option>
+                        <option value="Poor">Poor</option>
+                    </select>
+
+                    <label for="lectureRecording">Does the university provide lecture recordings for later
+                        review?</label>
+                    <select id="lectureRecording" name="lectureRecording" required>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Section 2: Educational Environment and University Services</legend>
+
+                    <label for="educationalQuality">How do you rate the quality of educational materials (e.g.,
+                        references and curricula) at your university?</label>
+                    <select id="educationalQuality" name="educationalQuality" required>
+                        <option value="Excellent">Excellent</option>
+                        <option value="Very Good">Very Good</option>
+                        <option value="Good">Good</option>
+                        <option value="Poor">Poor</option>
+                    </select>
+
+                    <label for="facilities">How available are the following university facilities? (Rate from 1 to 5,
+                        where 1 = Very Poor, 5 = Excellent)</label>
+                    <div>
+                        <label for="library">Library:</label>
+                        <input type="number" id="library" name="library" min="1" max="5" required placeholder="1 to 5">
+                    </div>
+                    <div>
+                        <label for="labs">Labs:</label>
+                        <input type="number" id="labs" name="labs" min="1" max="5" required placeholder="1 to 5">
+                    </div>
+                    <div>
+                        <label for="internet">University Internet:</label>
+                        <input type="number" id="internet" name="internet" min="1" max="5" required
+                            placeholder="1 to 5">
+                    </div>
+                    <div>
+                        <label for="classrooms">Classrooms:</label>
+                        <input type="number" id="classrooms" name="classrooms" min="1" max="5" required
+                            placeholder="1 to 5">
+                    </div>
+
+                    <label for="universityServices">Do you feel that university services like transportation and housing
+                        meet your needs?</label>
+                    <select id="universityServices" name="universityServices" required>
+                        <option value="Yes, excellently">Yes, excellently</option>
+                        <option value="Yes, to some extent">Yes, to some extent</option>
+                        <option value="No, requires significant improvement">No, requires significant improvement
+                        </option>
+                    </select>
+
+                    <label for="challenges">What are the biggest challenges in accessing sufficient educational
+                        resources?</label>
+                    <div>
+                        <input type="checkbox" id="resourcesAvailability" name="challenges"
+                            value="Unavailable within the university">
+                        <label for="resourcesAvailability">Unavailable within the university</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="highCost" name="challenges" value="High cost">
+                        <label for="highCost">High cost</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="unclearCourses" name="challenges" value="Unclear courses">
+                        <label for="unclearCourses">Unclear courses</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="otherChallenges" name="challenges" value="Other">
+                        <label for="otherChallenges">Other:</label>
+                        <input type="text" id="otherChallengesText" name="otherChallengesText"
+                            placeholder="Enter other challenge">
+                    </div>
+                </fieldset>
+
+
+                <fieldset>
+                    <legend>Section 3: University Life and Social Adjustment</legend>
+
+                    <label for="socialEnvironment">How would you describe the social environment at your
+                        university?</label>
+                    <select id="socialEnvironment" name="socialEnvironment" required>
+                        <option value="Friendly and supportive">Friendly and supportive</option>
+                        <option value="Neutral">Neutral</option>
+                        <option value="Unfriendly">Unfriendly</option>
+                    </select>
+
+                    <label for="socialAdjustment">Do you feel comfortable adjusting to your peers and
+                        professors?</label>
+                    <select id="socialAdjustment" name="socialAdjustment" required>
+                        <option value="Yes, completely">Yes, completely</option>
+                        <option value="To some extent">To some extent</option>
+                        <option value="No">No</option>
+                    </select>
+
+                    <label for="activities">Does the university offer activities that help you socially engage (e.g.,
+                        clubs, events, trips)?</label>
+                    <select id="activities" name="activities" required>
+                        <option value="Yes, greatly">Yes, greatly</option>
+                        <option value="Yes, to some extent">Yes, to some extent</option>
+                        <option value="Rarely">Rarely</option>
+                        <option value="No">No</option>
+                    </select>
+
+                    <label for="activityImpact">How would you describe the impact of these activities on your university
+                        experience?</label>
+                    <select id="activityImpact" name="activityImpact" required>
+                        <option value="Very positive">Very positive</option>
+                        <option value="Somewhat positive">Somewhat positive</option>
+                        <option value="No impact">No impact</option>
+                        <option value="Negative">Negative</option>
+                    </select>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Section 4: Advice and Overall Evaluation</legend>
+
+                    <label for="recommendation">Would you recommend new students to join your university?</label>
+                    <select id="recommendation" name="recommendation" required>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select>
+
+                    <label for="advice">What is the most important advice you would give first-year students?</label>
+                    <select id="advice" name="advice" required>
+                        <option value="Focus on attending lectures">Focus on attending lectures</option>
+                        <option value="Look for additional learning resources">Look for additional learning resources
+                        </option>
+                        <option value="Engage in university activities">Engage in university activities</option>
+                        <option value="Time management and organization">Time management and organization</option>
+                    </select>
+
+                    <label for="overallExperience">Overall, how would you rate your university experience?</label>
+                    <input type="number" id="overallExperience" name="overallExperience" min="1" max="10" required
+                        placeholder="From 1 to 10">
+
+                    <label for="comments">If you have any additional comments or suggestions for improving the
+                        university or the survey, please write them here:</label>
+                    <textarea id="comments" name="comments" placeholder="Enter your comments here"></textarea>
+
+                    <div class="submit-section">
+                        <button type="submit" class="btn-primary">Submit Survey</button>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <p><span class="custom-font">&copy; 2025 | Designed by Mohannad Almageedy
+                &
+                Mohammed
+                Alhelaly</span> </p>
+    </footer>
+
+    <script src="../assets/js/controller.js"></script>
+</body>
+
+</html>
